@@ -15,7 +15,7 @@ function Navbar() {
             <Link to="/">Home</Link>
             <Link to="/create-recipes">CreateRecipe</Link>
             <Link to="/saved-recipes">SavedRecipes</Link>
-            { auth.authenticated ? <button onClick={onClick}>logout</button> : <Link to="/auth">Login/Register</Link>}
+            { auth.authenticated ? <button className="logout-button" onClick={onClick}>Log out</button> : <Link to="/auth">Login/Register</Link>}
         </div>
     );
 }

@@ -47,9 +47,9 @@ function Home() {
             <ul>
                 {recipes.map((recipe) => { return(
                     <li key={recipe._id}>
-                        <div>
+                        <div className="name-button-div">
                             <h2>{recipe.name}</h2>
-                            <button onClick={()=>{saveRecipe(recipe._id)}} disabled = {isSaved(recipe._id)}>{isSaved(recipe._id) ? "saved" : "save"}</button>
+                            <button className = "save-button" onClick={()=>{saveRecipe(recipe._id)}} disabled = {isSaved(recipe._id)}>{isSaved(recipe._id) ? "saved" : "save"}</button>
                         </div>
                         <div className="instructions">
                             <p>{recipe.instructions}</p>

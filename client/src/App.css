@@ -10,7 +10,7 @@
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
+    }
   
   body {
     margin: 0;
@@ -22,7 +22,6 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - 80px);
-    background-color: #f2f2f2;
   }
   
   .auth-container {
@@ -32,10 +31,22 @@
     align-items: center;
     padding: 20px;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 20px;
     width: 400px;
+  }
+
+  .auth-container button{
+    background-color: rgb(201, 201, 201);
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+
+  .auth-container button:hover{
+    background-color: grey;
   }
   
   .form-group {
@@ -46,7 +57,7 @@
   
   label {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
   
   input {
@@ -74,6 +85,12 @@
     text-decoration: none;
     margin: 10px;
     font-size: 25px;
+    padding: 0px 5px;
+    border-radius: 5px;
+  }
+  a:hover{
+    background-color: white;
+    color: black;
   }
   
   .create-recipe {
@@ -92,6 +109,9 @@
     display: flex;
     flex-direction: column;
   }
+  .create-recipe form button {
+    margin:5px 30% ;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -99,9 +119,18 @@
   }
   
   li {
-    border: 1px solid black;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 0 6px rgb(109, 109, 109); 
+  }
+
+  h1{
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: underline;
   }
   
   h2 {
@@ -109,7 +138,6 @@
   }
   
   img {
-    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
   }
@@ -122,3 +150,31 @@
     max-width: 400px;
     font-size: 12px;
   }
+
+  .logout-button{
+    border: none;
+    border-radius: 3px;
+    margin: 10px;
+    font-size: 15px;
+    padding: 5px;
+    width: 60px
+  }
+  .logout-button:hover , .save-button:not(:disabled):hover{
+    background-color: grey;
+    cursor: pointer;
+  }
+
+  .save-button{
+    font-size: 15px;
+    padding: 1px 5px;
+    margin: 3px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+
+  .name-button-div{
+    display: flex;
+    justify-content: space-between;
+  }
+

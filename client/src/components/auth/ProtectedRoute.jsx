@@ -8,7 +8,8 @@ export function ProtectedRoute(props){
     const navigate = useNavigate()
     const location = useLocation()
     useEffect(()=>{auth.setRedirectRoute(location.pathname)})
-    if(!auth.authenticated) 
+    if(!auth.authenticated) {
         return <Navigate to="/auth"/>
+    }
     return(props.children);
 }

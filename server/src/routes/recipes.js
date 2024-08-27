@@ -55,9 +55,7 @@ router.get("/savedRecipes/id", isAuthenticated, async (req, res) => {
 router.get("/savedRecipes", isAuthenticated, async (req, res) => {
     try {
         const user = await UserModel.findById(req.user._id)
-        console.log(user)
         const savedRecipes = await recipeModel.find({ _id: { $in: user.savedRecipes } })
-        console.log(savedRecipes)
         res.json(savedRecipes);
     } catch (error) {
         console.log(error)
