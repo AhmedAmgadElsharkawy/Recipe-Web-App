@@ -6,8 +6,6 @@ A full-stack web application that allows users to browse, create, and save recip
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Installation
