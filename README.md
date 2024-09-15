@@ -65,7 +65,7 @@ A full-stack web application that allows users to browse, create, and save recip
 ## Features
 
 - User authentication, authorization and registration
-- Create, and delete recipes
+- Create, and share recipes
 - Browse for recipes
 - Save favorite recipes
 
