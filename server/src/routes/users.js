@@ -52,7 +52,10 @@ router.post("/login", async (req, res) => {
         return res.json({ message: "User or Passwoerd is incorrect" });
 
     const token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_KEY);
-    res.json({ token, userid: user._id });
+    res.cookie('access_token', token, {
+        expires: new Date(Date.now() + 3600000), // 1 hour from now
+    });
+    res.json({ token:true, userid: user._id });
 })
 
 router.get("/verifyToken",isAuthenticated, (req, res) => {

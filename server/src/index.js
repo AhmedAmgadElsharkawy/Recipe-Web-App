@@ -11,7 +11,10 @@ mongoose.connect(process.env.MONGODB_URL);
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(cors({ 
+    origin: 'http://localhost:3001', // Replace with your React app's origin
+    credentials: true 
+}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.use("/auth",userRouter);

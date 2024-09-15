@@ -18,13 +18,13 @@ function Login() {
             const response = await axios.post("http://localhost:3000/auth/login", {
                 username,
                 password,
-              });
+              },{withCredentials:true});
             if(response.data.message){
                 alert(response.data.message)
                 navigate("/auth")
             }
             else if(response.data.token){
-                setCookie("access_token",response.data.token)
+                setCookie("ac",true)
                 auth.login();
                 navigate("/",{replace:true});
             }
